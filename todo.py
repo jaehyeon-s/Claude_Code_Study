@@ -51,6 +51,14 @@ def complete_task(index):
     print(f"🎉 완료: {tasks[index - 1]['title']}")
 
 
+def delete_task(index):
+    tasks = load_tasks()
+    # 사용자는 1번부터 세므로 -1 해서 실제 위치를 찾는다
+    removed = tasks.pop(index - 1)
+    save_tasks(tasks)
+    print(f"🗑️ 삭제됨: {removed['title']}")
+
+
 def main():
     args = sys.argv[1:]
     if not args:
@@ -64,6 +72,8 @@ def main():
         list_tasks()
     elif command == "done":
         complete_task(int(args[1]))
+    elif command == "delete":
+        delete_task(int(args[1]))
     else:
         print(f"알 수 없는 명령: {command}")
         print(__doc__)
