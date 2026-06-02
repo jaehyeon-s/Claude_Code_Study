@@ -45,6 +45,10 @@ def list_tasks():
 
 def complete_task(index):
     tasks = load_tasks()
+    # 번호가 목록 범위(1 ~ 개수) 안에 있는지 먼저 확인한다
+    if index < 1 or index > len(tasks):
+        print(f"⚠️ {index}번 할 일이 없습니다. 1~{len(tasks)} 사이의 번호를 입력하세요.")
+        return
     # 사용자는 1번부터 세므로 -1 해서 실제 위치를 찾는다
     tasks[index - 1]["done"] = True
     save_tasks(tasks)
@@ -53,6 +57,10 @@ def complete_task(index):
 
 def delete_task(index):
     tasks = load_tasks()
+    # 번호가 목록 범위(1 ~ 개수) 안에 있는지 먼저 확인한다
+    if index < 1 or index > len(tasks):
+        print(f"⚠️ {index}번 할 일이 없습니다. 1~{len(tasks)} 사이의 번호를 입력하세요.")
+        return
     # 사용자는 1번부터 세므로 -1 해서 실제 위치를 찾는다
     removed = tasks.pop(index - 1)
     save_tasks(tasks)
