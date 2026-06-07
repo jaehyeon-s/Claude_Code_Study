@@ -22,7 +22,7 @@ python3 todo.py done <번호>  # 완료 처리
 | **3** | Git & GitHub | 브랜치→커밋→PR 생성→리뷰 (GitHub MCP) | ⬜ |
 | **4** | Plan Mode & 대규모 작업 | 멀티 파일 리팩터링: 계획→승인→실행 | ⬜ |
 | **5** | 스킬 & 슬래시 커맨드 | `/code-review`, `/security-review`, `/simplify` | ⬜ |
-| **6** | 설정 & 자동화 | `settings.json`, Hooks(저장 시 자동 테스트), MCP 활용 | ⬜ |
+| **6** | 설정 & 자동화 | `settings.json`, Hooks(저장 시 자동 테스트), MCP, `/loop`로 주기적 자율 실행 맛보기 | ⬜ |
 | **7** | 종합 실전 | 작은 앱 풀사이클: 기획→구현→리뷰→테스트→PR | ⬜ |
 
 ## 핵심 멘탈모델
@@ -37,3 +37,8 @@ python3 todo.py done <번호>  # 완료 처리
 - **Day 2** (2026-06-02): 파일 탐색 & 코드 작성. `delete` 명령 추가(Read→Edit),
   Grep으로 `done`/`delete`의 번호 범위 버그 발견 → 예외 처리로 수정, Bash로 검증.
   기능 추가와 버그 수정을 커밋 분리.
+
+## 메모 (나중에 실습할 주제)
+- **24시간 자율 실행**: headless 모드(`claude -p`) + 권한 자동승인(`--dangerously-skip-permissions`)
+  + 할 일 큐 + 격리 컨테이너 조합. 이벤트 기반(GitHub Actions)이나 `/loop` 스킬로도 가능.
+  → Day 6에서 `/loop`로 안전하게 맛보기 예정.
