@@ -67,6 +67,18 @@ def delete_task(index):
     print(f"🗑️ 삭제됨: {removed['title']}")
 
 
+def clear_tasks():
+    tasks = load_tasks()
+    # 완료되지 않은 것만 남긴다 (= 완료된 것만 제거)
+    remaining = [task for task in tasks if not task["done"]]
+    removed_count = len(tasks) - len(remaining)
+    if removed_count == 0:
+        print("🧹 지울 완료된 할 일이 없습니다.")
+        return
+    save_tasks(remaining)
+    print(f"🧹 완료된 할 일 {removed_count}개를 비웠습니다.")
+
+
 def main():
     args = sys.argv[1:]
     if not args:
@@ -82,6 +94,8 @@ def main():
         complete_task(int(args[1]))
     elif command == "delete":
         delete_task(int(args[1]))
+    elif command == "clear":
+        clear_tasks()
     else:
         print(f"알 수 없는 명령: {command}")
         print(__doc__)
