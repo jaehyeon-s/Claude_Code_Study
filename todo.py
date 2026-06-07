@@ -45,10 +45,38 @@ def list_tasks():
 
 def complete_task(index):
     tasks = load_tasks()
+    # 번호가 목록 범위(1 ~ 개수) 안에 있는지 먼저 확인한다
+    if index < 1 or index > len(tasks):
+        print(f"⚠️ {index}번 할 일이 없습니다. 1~{len(tasks)} 사이의 번호를 입력하세요.")
+        return
     # 사용자는 1번부터 세므로 -1 해서 실제 위치를 찾는다
     tasks[index - 1]["done"] = True
     save_tasks(tasks)
     print(f"🎉 완료: {tasks[index - 1]['title']}")
+
+
+def delete_task(index):
+    tasks = load_tasks()
+    # 번호가 목록 범위(1 ~ 개수) 안에 있는지 먼저 확인한다
+    if index < 1 or index > len(tasks):
+        print(f"⚠️ {index}번 할 일이 없습니다. 1~{len(tasks)} 사이의 번호를 입력하세요.")
+        return
+    # 사용자는 1번부터 세므로 -1 해서 실제 위치를 찾는다
+    removed = tasks.pop(index - 1)
+    save_tasks(tasks)
+    print(f"🗑️ 삭제됨: {removed['title']}")
+
+
+def clear_tasks():
+    tasks = load_tasks()
+    # 완료되지 않은 것만 남긴다 (= 완료된 것만 제거)
+    remaining = [task for task in tasks if not task["done"]]
+    removed_count = len(tasks) - len(remaining)
+    if removed_count == 0:
+        print("🧹 지울 완료된 할 일이 없습니다.")
+        return
+    save_tasks(remaining)
+    print(f"🧹 완료된 할 일 {removed_count}개를 비웠습니다.")
 
 
 def main():
@@ -64,6 +92,10 @@ def main():
         list_tasks()
     elif command == "done":
         complete_task(int(args[1]))
+    elif command == "delete":
+        delete_task(int(args[1]))
+    elif command == "clear":
+        clear_tasks()
     else:
         print(f"알 수 없는 명령: {command}")
         print(__doc__)
