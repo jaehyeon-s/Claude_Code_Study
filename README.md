@@ -19,7 +19,7 @@ python3 todo.py done <번호>  # 완료 처리
 |-----|------|--------------------|------|
 | **1** | 기본기 & 멘탈모델 | 작은 CLI 앱 뼈대 만들기 + `/init`으로 CLAUDE.md 생성 | ✅ 완료 |
 | **2** | 파일 탐색 & 코드 작성 | 기능 구현 → 버그 심기 → 찾아서 수정 (Read/Grep/Edit) | ✅ 완료 |
-| **3** | Git & GitHub | 브랜치→커밋→PR 생성→리뷰 (GitHub MCP) | ⬜ |
+| **3** | Git & GitHub | 브랜치→커밋→PR 생성→리뷰 (GitHub MCP) | ✅ 완료 |
 | **4** | Plan Mode & 대규모 작업 | 멀티 파일 리팩터링: 계획→승인→실행 | ⬜ |
 | **5** | 스킬 & 슬래시 커맨드 | `/code-review`, `/security-review`, `/simplify` | ⬜ |
 | **6** | 설정 & 자동화 | `settings.json`, Hooks(저장 시 자동 테스트), MCP, `/loop`로 주기적 자율 실행 맛보기 | ⬜ |
@@ -37,6 +37,10 @@ python3 todo.py done <번호>  # 완료 처리
 - **Day 2** (2026-06-02): 파일 탐색 & 코드 작성. `delete` 명령 추가(Read→Edit),
   Grep으로 `done`/`delete`의 번호 범위 버그 발견 → 예외 처리로 수정, Bash로 검증.
   기능 추가와 버그 수정을 커밋 분리.
+- **Day 3** (2026-06-07): Git & GitHub 전 과정을 직접 지휘.
+  `feature/clear` 브랜치 생성 → `clear` 명령 구현 → 테스트 → 커밋 → push →
+  PR #2 생성 → `/code-review`로 리뷰 → main 머지. "PR은 작게 유지" 원칙 적용.
+  (리뷰에서 발견한 기존 버그 2건: add/done/delete 인자 누락·비숫자 입력 → 다음 작업거리.)
 
 ## 메모 (나중에 실습할 주제)
 - **24시간 자율 실행**: headless 모드(`claude -p`) + 권한 자동승인(`--dangerously-skip-permissions`)
