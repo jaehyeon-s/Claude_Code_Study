@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>학습 여정 · Jay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="nav__logo">Jay<span>.dev</span></a>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">소개</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="journey.html" class="active">학습 여정</a>
+      <a href="contact.html">연락처</a>
+    </nav>
+    <button id="themeToggle" class="nav__theme" aria-label="다크모드 전환">🌙</button>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <h1>📚 Claude Code 학습 여정</h1>
+      <p>한 달 동안 기능·활용법·Agent·명령어를 직접 지휘하며 익히는 기록입니다.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <ol class="timeline">
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 1</span>
+          <div>
+            <h3>기본기 & 멘탈모델</h3>
+            <p>"도구를 쓰는 에이전트" 개념 이해 + 첫 CLI 앱 제작.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 2</span>
+          <div>
+            <h3>파일 탐색 & 편집</h3>
+            <p>Read/Grep/Edit으로 기능 추가하고 버그를 찾아 수정.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 3</span>
+          <div>
+            <h3>Git & GitHub 워크플로</h3>
+            <p>브랜치 → 커밋 → PR → 코드 리뷰 → 머지 전 과정을 직접 지휘. 머지 충돌 해결까지 경험.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__day">Day 4~</span>
+          <div>
+            <h3>Plan Mode & 그 이후</h3>
+            <p>계획→승인→실행, 명령어 심화, Agent·자동화, 도구 비교까지 진행 예정.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jay · Claude Code로 만들고 GitHub Pages로 배포</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
