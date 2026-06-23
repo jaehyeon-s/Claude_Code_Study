@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jae · 포트폴리오 & Claude Code 학습 여정</title>
+  <meta name="description" content="개인 개발자 포트폴리오와 Claude Code 한 달 학습 기록을 한곳에 모은 사이트." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== 상단 네비게이션 (페이지 내 섹션 분류) ===== -->
+  <header class="nav">
+    <a href="#home" class="nav__logo">Jae<span>.dev</span></a>
+    <nav class="nav__links">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#journey">학습 여정</a>
+      <a href="#contact">연락처</a>
+    </nav>
+    <button id="themeToggle" class="nav__theme" aria-label="다크모드 전환">🌙</button>
+  </header>
+
+  <main>
+    <!-- ===== Hero (첫인상) ===== -->
+    <section id="home" class="hero">
+      <p class="hero__hi">안녕하세요 👋</p>
+      <h1 class="hero__title">코드로 배우고 만드는<br /><span>개발자 Jae</span> 입니다</h1>
+      <p class="hero__sub">개인 프로젝트와 Claude Code 한 달 학습 여정을 한곳에 기록합니다.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+        <a href="#journey" class="btn btn--ghost">학습 여정 보기</a>
+      </div>
+    </section>
+
+    <!-- ===== 섹션 1: 개인 포트폴리오 (소개) ===== -->
+    <section id="about" class="section">
+      <h2 class="section__title">👤 소개</h2>
+      <div class="about">
+        <p class="about__bio">
+          <!-- TODO: 자기소개를 자유롭게 수정하세요 -->
+          새로운 도구를 직접 써보며 배우는 걸 좋아합니다.
+          작은 것부터 만들어 공개하고, 피드백을 받아 키워나가는 방식을 선호합니다.
+        </p>
+        <div class="about__skills">
+          <h3>기술 스택</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Git / GitHub</li>
+            <li>HTML / CSS / JS</li>
+            <li>Claude Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 섹션 2: 프로젝트 ===== -->
+    <section id="projects" class="section">
+      <h2 class="section__title">🛠️ 프로젝트</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">todo CLI</h3>
+          <p class="card__desc">
+            표준 라이브러리만으로 만든 작은 할 일 관리 CLI.
+            add / list / done / delete / clear 명령을 지원합니다.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Python</li>
+            <li>CLI</li>
+          </ul>
+          <a class="card__link" href="https://github.com/jaehyeon-s/Claude_Code_Study" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card card--placeholder">
+          <h3 class="card__title">다음 프로젝트</h3>
+          <p class="card__desc">학습이 진행되며 새 프로젝트가 여기에 추가됩니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 섹션 3: Claude Code 학습 여정 (타임라인) ===== -->
+    <section id="journey" class="section">
+      <h2 class="section__title">📚 Claude Code 학습 여정</h2>
+      <p class="section__lead">한 달 동안 Claude Code의 기능·활용법·Agent·명령어를 직접 지휘하며 익히는 기록입니다.</p>
+      <ol class="timeline">
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 1</span>
+          <div>
+            <h3>기본기 & 멘탈모델</h3>
+            <p>"도구를 쓰는 에이전트" 개념 이해 + 첫 CLI 앱 제작.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 2</span>
+          <div>
+            <h3>파일 탐색 & 편집</h3>
+            <p>Read/Grep/Edit으로 기능 추가하고 버그를 찾아 수정.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--done">
+          <span class="timeline__day">Day 3</span>
+          <div>
+            <h3>Git & GitHub 워크플로</h3>
+            <p>브랜치 → 커밋 → PR → 코드 리뷰 → 머지 전 과정을 직접 지휘.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__day">Day 4~</span>
+          <div>
+            <h3>Plan Mode & 그 이후</h3>
+            <p>계획→승인→실행, 명령어 심화, Agent·자동화, 도구 비교까지 진행 예정.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 섹션 4: 연락처 ===== -->
+    <section id="contact" class="section">
+      <h2 class="section__title">✉️ 연락처</h2>
+      <p class="section__lead">아래 채널로 연락하실 수 있습니다.</p>
+      <div class="contact">
+        <a class="btn btn--ghost" href="https://github.com/jaehyeon-s" target="_blank" rel="noopener">GitHub</a>
+        <!-- TODO: 이메일을 공개하려면 아래 주석을 풀고 주소를 넣으세요 -->
+        <!-- <a class="btn btn--ghost" href="mailto:you@example.com">Email</a> -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jae · Claude Code로 만들고 GitHub Pages로 배포</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
