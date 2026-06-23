@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로젝트 · Jay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="nav__logo">Jay<span>.dev</span></a>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">소개</a>
+      <a href="projects.html" class="active">프로젝트</a>
+      <a href="journey.html">학습 여정</a>
+      <a href="contact.html">연락처</a>
+    </nav>
+    <button id="themeToggle" class="nav__theme" aria-label="다크모드 전환">🌙</button>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <h1>🛠️ 프로젝트</h1>
+      <p>"문제 정의 → 기술 선택의 근거 → 직접 구현·검증" 기준으로 정리했습니다.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">PTZ 카메라 자동 추적 시스템</h3>
+          <p class="card__desc">
+            강의자를 끝까지 놓치지 않도록 마이크 어레이 음원방향(DOA)과 영상 AI를
+            교차 검증하는 멀티모달 추적 시스템. Raspberry Pi 5 엣지에서 실시간 동작.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Raspberry Pi 5</li>
+            <li>YOLO / ByteTrack</li>
+            <li>NCNN</li>
+            <li>멀티모달(DOA)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">JAVIS — 재난대응 에이전트 플랫폼</h3>
+          <p class="card__desc">
+            재난 법령·매뉴얼 PDF를 지식 그래프로 구조화하고, MCP로 LLM과 연결해
+            동적 SOP를 생성하는 멀티 에이전트 파이프라인. 환각 검증 루틴을 필수로 설계.
+          </p>
+          <ul class="tags tags--sm">
+            <li>MCP</li>
+            <li>LLM 오케스트레이션</li>
+            <li>지식 그래프</li>
+            <li>멀티 에이전트</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">IoT 고양이 헬스케어 모니터링</h3>
+          <p class="card__desc">
+            ESP32 센서로 물리 신호를 획득해 엣지에서 1차 판별하고 MQTT로 전송하는
+            종단(end-to-end) IoT 파이프라인을 혼자 설계·구현한 개인 프로젝트.
+          </p>
+          <ul class="tags tags--sm">
+            <li>ESP32</li>
+            <li>MQTT</li>
+            <li>센서 / ADC</li>
+            <li>IoT</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">멀티 AI 토론 봇</h3>
+          <p class="card__desc">
+            참가자·판정자 역할을 분리한 멀티 AI 토론 아키텍처를 자체 구축.
+            홈 Linux 서버에서 운영.
+          </p>
+          <ul class="tags tags--sm">
+            <li>LLM</li>
+            <li>아키텍처 설계</li>
+            <li>Linux 서버</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">todo CLI <span style="font-weight:400;font-size:.8em;color:var(--muted)">(학습용)</span></h3>
+          <p class="card__desc">
+            Claude Code 학습 과정에서 만든 작은 할 일 관리 CLI.
+            add / list / done / delete / clear 명령을 지원합니다.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Python</li>
+            <li>CLI</li>
+          </ul>
+          <a class="card__link" href="https://github.com/jaehyeon-s/Claude_Code_Study" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jay · Claude Code로 만들고 GitHub Pages로 배포</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
