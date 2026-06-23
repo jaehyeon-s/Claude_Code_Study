@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jae · 포트폴리오 & Claude Code 학습 여정</title>
-  <meta name="description" content="개인 개발자 포트폴리오와 Claude Code 한 달 학습 기록을 한곳에 모은 사이트." />
+  <title>Jay · 포트폴리오 & Claude Code 학습 여정</title>
+  <meta name="description" content="엣지 AI·IoT 시스템 프로젝트와 Claude Code 한 달 학습 기록을 모은 사이트." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- ===== 상단 네비게이션 (페이지 내 섹션 분류) ===== -->
   <header class="nav">
-    <a href="#home" class="nav__logo">Jae<span>.dev</span></a>
+    <a href="#home" class="nav__logo">Jay<span>.dev</span></a>
     <nav class="nav__links">
       <a href="#about">소개</a>
       <a href="#projects">프로젝트</a>
@@ -24,43 +24,95 @@
     <!-- ===== Hero (첫인상) ===== -->
     <section id="home" class="hero">
       <p class="hero__hi">안녕하세요 👋</p>
-      <h1 class="hero__title">코드로 배우고 만드는<br /><span>개발자 Jay</span> 입니다</h1>
-      <p class="hero__sub">개인 프로젝트와 Claude Code 한 달 학습 여정을 한곳에 기록합니다.</p>
+      <h1 class="hero__title">엣지 AI · IoT 시스템을 만드는<br /><span>개발자 Jay</span> 입니다</h1>
+      <p class="hero__sub">센서 · 엣지 추론 · 에이전트 의사결정 · 인프라를 아우르며 IoT 시스템을 종단으로 설계합니다.</p>
       <div class="hero__cta">
         <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
         <a href="#journey" class="btn btn--ghost">학습 여정 보기</a>
       </div>
     </section>
 
-    <!-- ===== 섹션 1: 개인 포트폴리오 (소개) ===== -->
+    <!-- ===== 섹션 1: 소개 (프로젝트 중심, 개인정보 최소화) ===== -->
     <section id="about" class="section">
       <h2 class="section__title">👤 소개</h2>
       <div class="about">
         <p class="about__bio">
-          <!-- TODO: 자기소개를 자유롭게 수정하세요 -->
-          새로운 도구를 직접 써보며 배우는 걸 좋아합니다.
-          작은 것부터 만들어 공개하고, 피드백을 받아 키워나가는 방식을 선호합니다.
+          엣지에서 무거운 AI 추론을 돌리고, 그 위에 에이전트 의사결정을 얹으며,
+          네트워크·가상화 인프라까지 직접 다루는 것을 지향합니다.
+          단순 "센서 연결"을 넘어 센서부터 클라우드·의사결정까지 시스템 전체를 설계·검증합니다.
         </p>
         <div class="about__skills">
-          <h3>기술 스택</h3>
+          <h3>관심 분야</h3>
+          <ul class="tags">
+            <li>엣지 AI 추론</li>
+            <li>멀티 에이전트 시스템</li>
+            <li>인프라 / 네트워킹</li>
+          </ul>
+          <h3 style="margin-top:1.2rem">기술 스택</h3>
           <ul class="tags">
             <li>Python</li>
-            <li>Git / GitHub</li>
-            <li>HTML / CSS / JS</li>
-            <li>Claude Code</li>
+            <li>NCNN / TensorRT</li>
+            <li>Jetson / Raspberry Pi</li>
+            <li>YOLO / ByteTrack</li>
+            <li>MCP / LLM 오케스트레이션</li>
+            <li>Proxmox / VyOS</li>
+            <li>MQTT</li>
+            <li>Docker / Git</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ===== 섹션 2: 프로젝트 ===== -->
+    <!-- ===== 섹션 2: 프로젝트 (노션 포트폴리오 기반) ===== -->
     <section id="projects" class="section">
       <h2 class="section__title">🛠️ 프로젝트</h2>
       <div class="cards">
         <article class="card">
-          <h3 class="card__title">todo CLI</h3>
+          <h3 class="card__title">PTZ 카메라 자동 추적 시스템</h3>
           <p class="card__desc">
-            표준 라이브러리만으로 만든 작은 할 일 관리 CLI.
+            강의자를 끝까지 놓치지 않도록 마이크 어레이 음원방향(DOA)과 영상 AI를
+            교차 검증하는 멀티모달 추적 시스템. Raspberry Pi 5 엣지에서 실시간 동작.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Raspberry Pi 5</li>
+            <li>YOLO / ByteTrack</li>
+            <li>NCNN</li>
+            <li>멀티모달(DOA)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">JAVIS — 재난대응 에이전트 플랫폼</h3>
+          <p class="card__desc">
+            재난 법령·매뉴얼 PDF를 지식 그래프로 구조화하고, MCP로 LLM과 연결해
+            동적 SOP를 생성하는 멀티 에이전트 파이프라인. 환각 검증 루틴을 필수로 설계.
+          </p>
+          <ul class="tags tags--sm">
+            <li>MCP</li>
+            <li>LLM 오케스트레이션</li>
+            <li>지식 그래프</li>
+            <li>멀티 에이전트</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">IoT 고양이 헬스케어 모니터링</h3>
+          <p class="card__desc">
+            ESP32 센서로 물리 신호를 획득해 엣지에서 1차 판별하고 MQTT로 전송하는
+            종단(end-to-end) IoT 파이프라인을 혼자 설계·구현한 개인 프로젝트.
+          </p>
+          <ul class="tags tags--sm">
+            <li>ESP32</li>
+            <li>MQTT</li>
+            <li>센서 / ADC</li>
+            <li>IoT</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">todo CLI <span style="font-weight:400;font-size:.8em;color:var(--muted)">(학습용)</span></h3>
+          <p class="card__desc">
+            Claude Code 학습 과정에서 만든 작은 할 일 관리 CLI.
             add / list / done / delete / clear 명령을 지원합니다.
           </p>
           <ul class="tags tags--sm">
@@ -68,11 +120,6 @@
             <li>CLI</li>
           </ul>
           <a class="card__link" href="https://github.com/jaehyeon-s/Claude_Code_Study" target="_blank" rel="noopener">GitHub →</a>
-        </article>
-
-        <article class="card card--placeholder">
-          <h3 class="card__title">다음 프로젝트</h3>
-          <p class="card__desc">학습이 진행되며 새 프로젝트가 여기에 추가됩니다.</p>
         </article>
       </div>
     </section>
@@ -119,8 +166,6 @@
       <p class="section__lead">아래 채널로 연락하실 수 있습니다.</p>
       <div class="contact">
         <a class="btn btn--ghost" href="https://github.com/jaehyeon-s" target="_blank" rel="noopener">GitHub</a>
-        <!-- TODO: 이메일을 공개하려면 아래 주석을 풀고 주소를 넣으세요 -->
-        <!-- <a class="btn btn--ghost" href="mailto:you@example.com">Email</a> -->
       </div>
     </section>
   </main>
